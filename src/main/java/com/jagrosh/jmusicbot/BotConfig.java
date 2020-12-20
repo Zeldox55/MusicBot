@@ -78,16 +78,16 @@ public class BotConfig
             // set values
             token = config.getString("token");
             prefix = config.getString("prefix");
-            altprefix = config.getString("altprefix");
-            helpWord = config.getString("help");
+            
+            
             owner = config.getLong("owner");
             successEmoji = config.getString("success");
             warningEmoji = config.getString("warning");
             errorEmoji = config.getString("error");
             loadingEmoji = config.getString("loading");
             searchingEmoji = config.getString("searching");
-            game = OtherUtil.parseGame(config.getString("game"));
-            status = OtherUtil.parseStatus(config.getString("status"));
+            
+            
             stayInChannel = config.getBoolean("stayinchannel");
             songInGame = config.getBoolean("songinstatus");
             npImages = config.getBoolean("npimages");
@@ -194,15 +194,7 @@ public class BotConfig
         return path.toFile().getAbsolutePath();
     }
     
-    public String getPrefix()
-    {
-        return prefix;
-    }
     
-    public String getAltPrefix()
-    {
-        return "NONE".equalsIgnoreCase(altprefix) ? null : altprefix;
-    }
     
     public String getToken()
     {
@@ -239,20 +231,13 @@ public class BotConfig
         return searchingEmoji;
     }
     
-    public Activity getGame()
-    {
-        return game;
-    }
+     
+        
     
-    public OnlineStatus getStatus()
-    {
-        return status;
-    }
     
-    public String getHelp()
-    {
-        return helpWord;
-    }
+        
+    
+           
     
     public boolean getStay()
     {
