@@ -107,12 +107,7 @@ public class Bot
             threadpool.submit(() -> guild.getAudioManager().closeAudioConnection());
     }
     
-    public void resetGame()
-    {
-        Activity game = config.getGame()==null || config.getGame().getName().equalsIgnoreCase("none") ? null : config.getGame();
-        if(!Objects.equals(jda.getPresence().getActivity(), game))
-            jda.getPresence().setActivity(game);
-    }
+                          
 
     public void shutdown()
     {
